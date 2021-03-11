@@ -29,10 +29,17 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   1. What is the difference between counter1 and counter2?
   
+    counter1 has the let variable inside a funtion and a callback function which is better for resuablitly and closure, and counter2 the let variable is in the global scope so extra caution would be needed to not redeclare count.
+
   2. Which of the two uses a closure? How can you tell?
+
+    counter1 uses a closure because all of its parts are inside a local scope of counterMaker(){} curly brackets.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+     count1 would be better if you wanted to use the 'count' variable again for something else, count2 would be better if wouldnt need to redeclare or manipulate 'count'
+
 */
 
 // counter1 code
